@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "NetflixHider",
+	"description": "Hides titles on Netflix that you never want to see again!",
+	"version": "1.0",
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "settings.html"
+	},
+	
+	"content_scripts": [
+		{
+			"matches": ["https://www.netflix.com/*"],
+			"js": ["hide.js"]
+		}
+	],
+	
+	"permissions": [
+		"activeTab"
+	]
+}
